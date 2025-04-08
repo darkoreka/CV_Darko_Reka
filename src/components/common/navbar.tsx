@@ -2,6 +2,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Download } from "lucide-react"
 import Image from "next/image"
+import { MobileNav } from "./mobile-nav"
 
 export function Navbar() {
     return (
@@ -36,30 +37,21 @@ export function Navbar() {
                     </Link>
                 </nav>
 
-                <Button variant="outline" size="sm" className="hidden md:flex">
-                    <Download className="mr-2 h-4 w-4" />
-                    Download CV
-                </Button>
-
-                <Button variant="ghost" size="sm" className="md:hidden">
-                    <span className="sr-only">Toggle menu</span>
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="h-6 w-6"
+                <a
+                    href="/Darko_Reka_CV.pdf"
+                    download
+                    className="hidden md:flex"
+                >
+                    <Button
+                        variant="outline"
+                        size="sm"
                     >
-                        <line x1="4" x2="20" y1="12" y2="12" />
-                        <line x1="4" x2="20" y1="6" y2="6" />
-                        <line x1="4" x2="20" y1="18" y2="18" />
-                    </svg>
-                </Button>
+                        <Download className="mr-2 h-4 w-4" />
+                        Download CV
+                    </Button>
+                </a>
+
+                <MobileNav />
             </div>
         </header>
     )

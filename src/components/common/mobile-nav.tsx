@@ -5,6 +5,7 @@ import Link from "next/link"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
 import { Download } from "lucide-react"
+import { DialogTitle } from "../ui/dialog"
 
 export function MobileNav() {
   const [open, setOpen] = useState(false)
@@ -41,6 +42,8 @@ export function MobileNav() {
         </Button>
       </SheetTrigger>
       <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+        <DialogTitle>
+        </DialogTitle>
         <nav className="flex flex-col gap-4 mt-8">
           {navItems.map((item) => (
             <Link
@@ -52,10 +55,18 @@ export function MobileNav() {
               {item.label}
             </Link>
           ))}
-          <Button className="mt-4" size="sm">
-            <Download className="mr-2 h-4 w-4" />
-            Download CV
-          </Button>
+          <a
+            href="/Darko_Reka_CV.pdf"
+            download
+          >
+            <Button
+              variant="outline"
+              size="sm"
+            >
+              <Download className="mr-2 h-4 w-4" />
+              Download CV
+            </Button>
+          </a>
         </nav>
       </SheetContent>
     </Sheet>
