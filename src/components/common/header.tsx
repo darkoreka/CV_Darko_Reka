@@ -12,7 +12,7 @@ export function Header() {
                     <div className="order-2 md:order-1">
                         <div className="space-y-4">
                             <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
-                                Hi! I'm a Fullstack Developer
+                                Hi! I&apos;m a Fullstack Developer
                             </h1>
                             <p className="text-muted-foreground max-w-[600px] text-white/80">
                                 Passionate about building engaging and user-friendly web applications.
