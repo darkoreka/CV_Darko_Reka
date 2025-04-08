@@ -45,7 +45,7 @@ export function Recommendations() {
                                             </>
                                         )}
                                     </p>
-                                    <p className="italic">"{rec.text}"</p>
+                                    <p className="italic">&quot;{rec.text}&quot;</p>
                                 </div>
                             </div>
                         </div>
