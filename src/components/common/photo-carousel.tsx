@@ -4,23 +4,10 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { images } from "@/lib/data/carousel-images"
 
 export function PhotoCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0)
-  const presentation = "https://res.cloudinary.com/kineto-app/image/upload/v1744104612/bemutato_skcsh2.jpg"
-  const bachelor = "https://res.cloudinary.com/kineto-app/image/upload/v1744104612/Bachelor2_vslxsc.jpg"
-  const bachelorPhoto = "https://res.cloudinary.com/kineto-app/image/upload/v1744104611/Bachelor_rjdk1q.jpg"
-  const mountains = "https://res.cloudinary.com/kineto-app/image/upload/v1744104611/Mountains_pkt6w1.jpg"
-  const slam = "https://res.cloudinary.com/kineto-app/image/upload/v1744104611/slam_aqtyni.jpg"
-
-  // Sample images - replace with your actual images
-  const images = [
-    presentation,
-    bachelor,
-    bachelorPhoto,
-    mountains,
-    slam
-  ]
 
   const goToPrevious = () => {
     const isFirstImage = currentIndex === 0
@@ -34,7 +21,6 @@ export function PhotoCarousel() {
     setCurrentIndex(newIndex)
   }
 
-  // Auto-rotate images every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       goToNext()
@@ -54,8 +40,6 @@ export function PhotoCarousel() {
           priority={currentIndex === 0}
         />
       </div>
-
-      {/* Navigation buttons */}
       <Button
         variant="ghost"
         size="icon"
@@ -76,7 +60,6 @@ export function PhotoCarousel() {
         <span className="sr-only">Next image</span>
       </Button>
 
-      {/* Dots indicator */}
       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
         {images.map((_, index) => (
           <button

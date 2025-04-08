@@ -1,14 +1,16 @@
 import Image from "next/image"
 import Link from "next/link"
 
+const LOGO = "https://res.cloudinary.com/kineto-app/image/upload/v1744104612/logo_xindir.png"
+
 export function Footer() {
-    const logo = "https://res.cloudinary.com/kineto-app/image/upload/v1744104612/logo_xindir.png"
+
     return (
         <footer className="border-t py-6 md:py-8">
             <div className="container flex flex-col md:flex-row justify-between items-center gap-4">
                 <div className="flex items-center gap-2">
                     <Image
-                        src={logo}
+                        src={LOGO}
                         alt="DRK Logo"
                         width={30}
                         height={30}

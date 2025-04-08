@@ -17,7 +17,7 @@ export function ProjectCard({ image, title, role, description, link, demo }: Pro
     const [showVideo, setShowVideo] = useState(false);
 
     const handleVideoEnd = () => {
-        setShowVideo(false); // Show the card again after the video ends
+        setShowVideo(false); 
     };
     return (
         <div className="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-md p-4">
